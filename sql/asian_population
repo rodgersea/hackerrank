@@ -1,0 +1,13 @@
+
+SELECT SUM(NUMBERS)
+FROM
+(   
+    SELECT POPULATION AS NUMBERS
+    FROM CITY
+    WHERE CODE IN
+    (
+        SELECT CODE
+        FROM COUNTRY
+        WHERE CONTINENT = 'Asia'
+    )
+)

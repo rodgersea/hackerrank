@@ -12,8 +12,9 @@ def beautifuldays(i, j, k):
     numdays = 0
     for x in range(i, j+1):
         print(x)
-        if abs(x-isbeautiful(x))%k == 0:
+        if abs(x-isbeautiful(x)) % k == 0:
             numdays += 1
     return numdays
+
 
 beautifuldays(20, 23, 6)
